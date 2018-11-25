@@ -259,8 +259,8 @@ user_run:
 		--hostname in-container \
 		--rm \
 		-u $(shell whoami) \
-		-v $(HOST_DIR):/host:cached \
-		-v $(shell whoami)-home:/home/$(shell whoami):cached \
+		-v $(HOST_DIR):/host:delegated \
+		-v $(shell whoami)-home:/home/$(shell whoami):delegated \
 		$(USER_IMG)-$(shell id -u) bash
 
 .PHONY: user_run_l4v

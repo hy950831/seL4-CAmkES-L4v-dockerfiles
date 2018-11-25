@@ -38,5 +38,5 @@ RUN useradd -u ${UID} ${UNAME} \
     && chown -R ${UNAME}:${UNAME} /home/${UNAME} \
     && chmod -R ug+rw /home/${UNAME} 
 
-VOLUME /home/${UNAME}:cached
+VOLUME /home/${UNAME}:delegated
 VOLUME /isabelle
